@@ -1,3 +1,6 @@
+Playwright Locators & Reliable UI Automation
+============================================
+
                 DOM
                  ↓
 What does the user/business identify this element as?

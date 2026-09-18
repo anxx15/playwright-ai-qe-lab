@@ -1,3 +1,5 @@
+Playwright Foundations + Your AI QE Workspace
+=============================================
 What is Playwright?
    Playwright enables reliable web automation for testing, scripting, and AI agents 
 
