@@ -1,13 +1,14 @@
-import { test as base } from '@playwright/test';
+import { test as base, expect } from '@playwright/test';
+import { PlaywrightHomePage } from '../pages/playwrightHomePage';
 
 type TestFixtures = {
-  appName: string;
+  homePage: PlaywrightHomePage;
 };
 
 export const test = base.extend<TestFixtures>({
-  appName: async ({}, use) => {
-    await use('Playwright AI QE Lab');
+  homePage: async ({ page }, use) => {
+    await use(new PlaywrightHomePage(page));
   },
 });
 
-export { expect } from '@playwright/test';
+export { expect };
