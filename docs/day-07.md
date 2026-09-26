@@ -48,3 +48,40 @@ Test data cleanup
         Test
         ↓
         DELETE test record
+
+
+
+              E2E UI
+             /      \
+            /        \
+          API        Integration
+          /            \
+         /              \
+      Unit / Component
+
+
+Create a conceptual API → DB test:
+    API creates transaction
+            ↓
+    extract transaction ID
+            ↓
+    query DB
+            ↓
+    validate transaction
+
+                       TEST
+                         │
+                     FIXTURES
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+       UI Layer       API Layer       DB Layer
+          │              │              │
+     Page Objects     API Clients    Repositories
+          │              │              │
+     Components     APIRequest       DbClient
+          │          Context             │
+          ▼              ▼               ▼
+      Browser           HTTP          Database
+
+I use each layer for what it validates best. APIs provide fast setup and service-level validation, DB validation verifies persistence where required, and UI tests focus on user-facing behavior. Combining the layers selectively gives better coverage and faster execution than making every test a full UI-to-DB end-to-end test.

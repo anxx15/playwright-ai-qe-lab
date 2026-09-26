@@ -28,14 +28,18 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: [
+    ['html'],
+    ['list']
+  ],
+
   use: {
     baseURL: 'https://playwright.dev/',
     headless: false,
     // viewport: { width: 1280, height: 720 },
     // ignoreHTTPSErrors: true,
-    // video: 'retain-on-failure',
-    // screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    screenshot: 'only-on-failure',
     trace: 'on-first-retry',
   },
 
@@ -43,16 +47,16 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
+    }
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
   ],
 });
