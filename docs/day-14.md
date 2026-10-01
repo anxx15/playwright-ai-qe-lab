@@ -203,13 +203,13 @@ We want to use AI to increase automation productivity by 40%.
                 ↓
         Select AI use cases
                 ↓
-        Pilot
+              Pilot
                 ↓
-        Measure
+             Measure
                 ↓
-        Governance
+            Governance
                 ↓
-        Scale
+              Scale
 
 Better AI-QE metrics:
     Automation development time

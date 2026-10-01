@@ -1,0 +1,14 @@
+implementation → challenge → solution
+=====================================
+I introduced AI into the QE lifecycle around my existing Pickle framework—test design, contextual retrieval, generation, maintenance, failure analysis and optimization—while keeping QE ownership and governance.
+
+1. AI-assisted test generation — Used AI to generate Pickle/Citrus test scenarios from payment requirements; challenge was generic/duplicate tests → constrained AI using framework conventions and existing examples.
+2. Requirement-to-test traceability — Used Jira/Confluence context to derive EFT/IAT/Wire/IMM scenarios; challenge was too much irrelevant information → RAG-style retrieval using relevant stories, acceptance criteria and business rules.
+3. Repository-aware AI — Provided AI with existing Pickle features, step definitions, utilities and test patterns; challenge was AI creating duplicate components → repository-level instructions forcing reuse of existing framework assets.
+4. AI-assisted test maintenance — Used AI to analyze failing Pickle/Citrus tests and suggest changes; challenge was AI fixing symptoms → required root-cause classification before modifying assertions or test logic.
+5. AI failure analysis — Fed execution logs/results into an AI analysis workflow; challenge was hundreds of failures with common underlying causes → AI clusters failures into application, test, environment, data and infrastructure categories.
+6. AI-generated negative/boundary coverage — Used AI to identify missing EFT/payment edge cases; challenge was trusting AI-generated scenarios → QE review against actual FTM/payment business rules before automation.
+7. Agentic test-development workflow — Established a flow of requirement → retrieve context → inspect framework → propose implementation → generate/modify test → execute → analyze failure; challenge was uncontrolled changes → human approval and Git/CI quality gates.
+8. AI-assisted test-data strategy — Used AI to identify reusable payment data and determine whether setup should happen through API, DB or existing Pickle mechanisms; challenge was parallel-test data collisions → isolated/generated test data rather than shared static data.
+9. AI-driven framework optimization — Used execution history to identify flaky, redundant or slow tests; challenge was optimizing without reducing coverage → AI recommends candidates while QE validates business-risk and coverage impact.
+10. Enterprise AI governance — Added repository instructions covering coding standards, security, locator/test patterns, assertions and AI usage; challenge was sensitive payment/customer information and AI hallucination → controlled context, no secrets/PII, human review, PR/CI gates and auditability.
