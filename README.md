@@ -26,6 +26,9 @@ playwright-ai-qe-lab/
 ├── tsconfig.json
 ├── .github/
 │   └── copilot-instructions.md
+|   └── prompts/
+|        └── analyze-failure.md
+|        └── generate-test.md
 ├── readme.md
 └── .gitignore
 ```
