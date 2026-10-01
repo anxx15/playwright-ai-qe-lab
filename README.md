@@ -13,24 +13,34 @@ A Playwright-based QA automation lab for browser and API testing, built with Typ
 
 ```text
 playwright-ai-qe-lab/
-├── tests/              # End-to-end and API tests
-├── pages/              # Page Object Models
-├── components/         # Reusable UI components
-├── fixtures/           # Shared test fixtures and setup
-├── api/                # API clients and request helpers
-├── database/           # Database connectivity and repositories
-├── test-data/          # Test data and fixtures
-├── utils/              # Generic utilities
+│
+├── .github/
+│   ├── copilot-instructions.md
+│   └── prompts/
+│       ├── generate-test.md
+│       ├── review-test.md
+│       └── analyze-failure.md
+│
+├── tests/                # End-to-end and API tests
+├── pages/                # Page Object Models
+├── components/           # Reusable UI components
+├── fixtures/             # Shared test fixtures and setup
+├── api/                  # API clients and request helpers
+├── database/             # Database connectivity and repositories
+├── test-data/            # Test data and fixtures
+├── utils/                # Generic utilities
+├── config/
+│
+├── docs/
+│   ├── architecture.md
+│   ├── day-01.md
+│   ├── ...
+│   ├── day-12.md
+│   └── interview-notes.md
+│
 ├── playwright.config.ts
 ├── package.json
-├── tsconfig.json
-├── .github/
-│   └── copilot-instructions.md
-|   └── prompts/
-|        └── analyze-failure.md
-|        └── generate-test.md
-├── readme.md
-└── .gitignore
+└── README.md
 ```
 
 ## Prerequisites
