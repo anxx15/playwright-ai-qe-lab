@@ -113,30 +113,24 @@ AI Code Review Checklist
             Are secrets logged?
 
 AI-Assisted             vs          Agentic
-Human                           Goal
-↓                                   ↓
-Prompt                         AI plans
-                                ↓
-                                AI inspects repository
-                                ↓
-                                AI modifies files
-                                ↓
-                                AI executes tests
-                                ↓
-                                AI analyzes failure
-                                ↓
-                                AI proposes/fixes
-                                ↓
-                                AI reruns
-                                ↓
-                                Human approves final result
-
-  ↓
-AI generates code
-  ↓
-Human reviews
-  ↓
-Human runs
+=========================================================================
+    Human                           Goal
+    ↓                                   ↓
+    Prompt                         AI plans
+    ↓                                   ↓
+    AI generates code               AI inspects repository
+    ↓                                   ↓
+    Human reviews                   AI modifies files
+    ↓                                   ↓
+    Human runs                      AI executes tests
+                                        ↓
+                                    AI analyzes failure
+                                        ↓
+                                    AI proposes/fixes
+                                        ↓
+                                    AI reruns
+                                        ↓
+                                    Human approves final result
 
 Where AI Fits in QE 2.0
 
